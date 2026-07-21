@@ -2,9 +2,32 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
+import random
+
 print("Welcome to the PyPassword Generator!")
 nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+password = []
+
+#choosing the 3 chars in random
+for i in range(0,nr_letters):
+    password.append(random.choice(letters))
+for i in range(0,nr_numbers):
+    password.append(random.choice(numbers))
+for i in range(0,nr_symbols):
+    password.append(random.choice(symbols))
+
+#shuffling the ordered list, so we can create a random pass form
+print(password)
+random.shuffle(password)
+print(password)
+
+#converting the list pass to a string password
+password_final =""
+for m in password:
+    password_final+=m
+
+print(password_final)
 
