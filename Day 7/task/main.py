@@ -23,7 +23,7 @@ correct_letters = []
 while not game_over:
 
     # TODO-6: - Update the code below to tell the user how many lives they have left.
-    print(f"****************************{lives}/6 LIVES REMAINING****************************")
+    print(f"****************************{lives}/6 LIVES USED****************************")
     guess = input("Guess a letter: ").lower()
 
     # TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
@@ -59,7 +59,7 @@ while not game_over:
 
     if "_" not in display:
         game_over = True
-        print("****************************YOU WIN***************************")
+        print("****************************YOU WIN****************************")
 
     # TODO-2: - Update the code below to use the stages List from the file hangman_art.py
     print(hangman_art.stages[lives])
