@@ -11,7 +11,7 @@ operations={'+': add, '-':sub, '*':multi, '/':div }
 
 import art
 
-def calculator():
+def calc():
     print(art.logo)
     should_accumulate = True
     num1 = float(input("What is the first number?: "))
@@ -31,10 +31,9 @@ def calculator():
         else:
             should_accumulate = False
             print("\n" * 20)
-            calculator()
+            calc()
 
 
-calculator()
-
+calc()
 
 
